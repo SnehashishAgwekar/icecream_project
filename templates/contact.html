@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Contact
+{% endblock title %}
+{% block body %}
+<div class="container-fluid mx-0 px-0">
+     <div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1613993995046-07bce4b0bfed?q=80&w=1800&h=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+">
+     </div>
+<div class="container mb-3 py-4">
+<h3 class="text-centre">Contact Us</h3>
+<form method="post" action="/contact">
+  {% csrf_token %}
+  <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your Name">
+  </div>
+  <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email">
+  </div>
+  <div class="mb-3">
+      <label for="phone" class="form-label">Phone No.</label>
+      <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter your Phone number">
+  </div>
+  <div class="mb-3">
+      <label for="desc" class="form-label">Enter your problem here</label>
+      <textarea name="desc" class="form-control" id="desc" rows="3" placeholder="Describe your issue..."></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+</div>
+{% endblock body %}
